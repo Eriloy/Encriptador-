@@ -1,0 +1,19 @@
+body {
+    background-color:#161616 ;
+}
+textarea {
+    width: 50%;
+    height: 300px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #0ccc8c;
+    border-radius: 4px;
+    background-color: #202124;
+    font-size: 16px;
+    color: #c891f5;
+    resize: none;
+}
+button{
+    background-color: #277b81;
+    border: none;
+}
