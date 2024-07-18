@@ -1,18 +1,31 @@
-body {
-    background-color:#161616 ;
+.encryptor {
+width: 80%;
+margin: 0 auto;
 }
-textarea {
-    width: 50%;
-    height: 300px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #0ccc8c;
-    border-radius: 4px;
-    background-color: #202124;
-    font-size: 16px;
-    color: #c891f5;
-    resize: none;
+.encryptor__container {
+display: flex;
+justify-content: space-between;
+align-items: flex start;
+padding: 20px;
 }
+.encryptor__textarea--input 
+.encryptor__textarea--output {
+width: 48%;
+height: 200px;
+resize: vertical; /* Allow vertical resizing */
+font-family: inherit; /* Inherit font family from body */
+font-size: 16px; /* Set desired font size */
+line-height: 1.5; /* Set line spacing */
+padding: 10px;
+}
+.encryptor__textarea--input::placeholder,
+.encryptor__textarea--output::placeholder{     
+    color: #808080;
+
+
+
+
+
 button{
     background-color: #277b81;
     border: none;

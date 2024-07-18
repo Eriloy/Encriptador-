@@ -19,3 +19,9 @@ function decryptText(text) {
     };
     return text.replace(/enter|imes|ai|ober|ufat/g ,match => decryptingMap[match]);
     }
+
+function copyText() {
+    const text = document.getElementById("inputText").value;
+    navigator.clipboard.writeText(text);
+    alert("Copiado al portapapeles");
+}
