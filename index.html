@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <header></header>
-   
-    <main>
-        <div class = "textOfarea">
-            <textarea id ="inputText" placeholder="Ingrese el texto aqui..."></textarea>
+    <header></header> 
+    <main class="encryptor">
+        <div class="encryptor__container">
+            <div class=" encryptor__section encryptor__section--input">
+            <textarea class = "encryptor__textarea encryptor__textarea--input" id = "inputText" placeholder="Ingrese el texto aqui para encriptar o desencriptar"></textarea>
+            </div>
+            <div class="encryptor__section encryptor__section--output">
+            <textarea class = "encryptor__textarea encryptor__textarea--output" id = "outputText" readonly placeholder="Texto encriptado o desencriptado"></textarea>
+            </div>
         </div>
-        <div class = "buttons"
-            <button id = "encriptButton">Encriptar</button>
-            <button id = "decryptButton">Desencriptar </button>
-            <button id = "copyButton">Copiar Texto </button>
+            <section class="encryptor__buttons">
+                <button class="encryptor__button--encrypt" id="encriptButton">Encriptar</button>
+                <button class="encrytor__button--decrypt" id = "decryptButton">Desencriptar </button>
+                <button class="encryptor__button--copy" id = "copyButton">Copiar Texto </button>
+            </section>   
+            <img class="encryptor__image" src="imagen.jpg" alt="Imagen de salida">
+            <div class="encryptor__image--overlay" id="imageOverlay"></div>
+        </div>    
+    </main>
+    <div class = "footerContent">
+    <footer>Desarrollado por Emily Gil</footer>
     </div>
 
-    <div class = "footerContent">   
-    
-        <img src="imagen.png" alt="">
-    </div>    
-    </main>
-    <footer>Desarrollado por Emily Gil</footer>
+    <script src="app.js"></script>
+</body>
+</html>
 
     <script src="app.js"></script>
 </body>
