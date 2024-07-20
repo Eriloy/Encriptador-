@@ -2,13 +2,19 @@ body{
     margin: 0;
     background-color:#6b232c;
     }
+.logo{
+    padding: 20px;  
+    }
     .encryptor__container{
-        
     display: flex;
     flex-direction: row; 
     justify-content: center;
     align-items: center;
+    padding: 60px;
+    margin-left: 40px;
     height: 200px;
+    height: 100vh; /* Ocupa toda la altura de la viewport */
+    min-height: 100vh;
 }
 
 
@@ -26,7 +32,7 @@ body{
     color: white;
     border-radius: 20px;
     padding: 10px;
-    border: 2px solid #24080b;
+    border: none;
     height: 200px;
     font-size: 16px;
     font-family: 'Inter', sans-serif;
