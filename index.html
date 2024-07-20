@@ -13,26 +13,23 @@
     <header></header> 
     <main class="encryptor">
         <div class="encryptor__container">
-            <div class=" encryptor__section encryptor__section--input">
+            <div class=" encryptor__input">
             <textarea class = "encryptor__textarea encryptor__textarea--input" id = "inputText" placeholder="Ingrese el texto aqui para encriptar o desencriptar"></textarea>
             </div>
-            <div class="encryptor__section encryptor__section--output">
-            <textarea class = "encryptor__textarea encryptor__textarea--output" id = "outputText" readonly placeholder="Texto encriptado o desencriptado"></textarea>
+            <div class="encryptor__output">
+            <textarea class = "encryptor__textarea encryptor__textarea--result" id = "outputText"readonly placeholder="Texto encriptado o desencriptado"></textarea>
             </div>
         </div>
-            <section class="encryptor__buttons">
-                <button class="encryptor__button--encrypt" id="encriptButton">Encriptar</button>
-                <button class="encrytor__button--decrypt" id = "decryptButton">Desencriptar </button>
-                <button class="encryptor__button--copy" id = "copyButton">Copiar Texto </button>
+            <section class="encryptor__actions">
+                <button class="encryptor__button encryptor__button--encrypt" id="encriptButton">Encriptar</button>
+                <button class="encrytor__button encryptor__button--decrypt" id = "decryptButton">Desencriptar </button>
+                <button class="encryptor__button encryptor__button--copy" id = "copyButton">Copiar Texto </button>
             </section>   
-            <img class="encryptor__image" src="imagen.jpg" alt="Imagen de salida">
-            <div class="encryptor__image--overlay" id="imageOverlay"></div>
-        </div>    
     </main>
     <div class = "footerContent">
     <footer>Desarrollado por Emily Gil</footer>
     </div>
-
+    <img class="encryptor__image--overlay" src="imagen.jpg" alt="Imagen de salida" id="imageOverlay">
     <script src="app.js"></script>
 </body>
 </html>
