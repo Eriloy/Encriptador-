@@ -6,7 +6,13 @@ body{
 .logo{
     padding: 20px;  
     }
-    .encryptor__container{
+.encryptor{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la altura de la viewport */
+    min-height: 100vh;
+}
+.encryptor__container{
     display: flex;
     flex-direction: row; 
     justify-content: center;
@@ -14,10 +20,8 @@ body{
     padding: 60px;
     margin-left: 40px;
     height: 200px;
-    height: 100vh; /* Ocupa toda la altura de la viewport */
-    min-height: 100vh;
+    
 }
-
 
 .encryptor__input,
 .encryptor__output {  
@@ -40,5 +44,10 @@ body{
     font-family: 'Inter', sans-serif;
     width: calc(90% - 3px);
     margin-right: 0;
-    
-    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
