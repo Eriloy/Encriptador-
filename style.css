@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    background-color:#6b232c;
+    background-image: linear-gradient(to top, #1a1616, #55081b);
+
     }
 .logo{
     padding: 20px;  
@@ -28,6 +29,7 @@ body{
 
 .encryptor__textarea{
     resize: none;
+    outline:none;
     background-color: #6b232c;
     color: white;
     border-radius: 20px;
