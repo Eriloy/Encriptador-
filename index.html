@@ -5,39 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" integrity="sha512-v/wOVTkoU7mXEJC3hXnw9AA6v32qzpknvuUF6J2Lbkasxaxn2nYcl+HGB7fr/kChGfCqubVr1n2sq1UFu3Gh1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <header>
-    <img class="logo"src="img/Logo-1.png"  alt="Logo">
-    </header> 
+    <div class="general-container">  <header>
+        <img class="logo" src="img/Logo-1.png" alt="Logo">
+    </header>
     <main class="encryptor">
-        <div class="encryptor__container">
+        
+    <div class="encryptor__container">
+        <div class="left-column">
             <div class=" encryptor__input">
-            <textarea class = "encryptor__textarea encryptor__textarea--input" id = "inputText" placeholder="Ingrese el texto aqui para encriptar o desencriptar"></textarea>
+                <textarea class="textarea textarea--input" id = "inputText" placeholder="Ingrese el texto aqui para encriptar o desencriptar"></textarea>
+                <button class="encryptor__button encryptor__button--encrypt" id = "encryptButton">Encriptar</button>
+                <button class="encrytor__button encryptor__button--decrypt" id = "decryptButton">Desencriptar </button>
             </div>
+        </div>
+        <div class="right-column">
             <div class="encryptor__output">
-            <textarea class = "encryptor__textarea encryptor__textarea--result" id = "outputText"readonly placeholder="Texto encriptado o desencriptado"></textarea>
+                <textarea class="textarea textarea--output" id = "outputText"readonly placeholder="Texto encriptado o desencriptado"></textarea>
+                <img class="output-image" src="img/gato-blanco.webp" alt="Imagen de salida" id="imageOverlay">
+                <p>No se encontró ninguna imagen</p>
+            </div>
+            <div class="image__container">
+                
             </div>
         </div>
-        <section class="encryptor__actions-container">
-            <button class="encryptor__button encryptor__button--encrypt" id = "encriptButton">Encriptar</button>
-            <button class="encrytor__button encryptor__button--decrypt" id = "decryptButton">Desencriptar </button>
-        <section/> 
-        <div class="utility-buttons">
+    </div> 
+    <div class="utility-buttons">
         <button class="copy-button" id="copyButton">Copiar Texto</button> 
-        </div>
+        <button class="dark-mode-button" onclick="myFunction()">Dark Mode</button>
+    </div>
     </main>
     <div class = "footerContent">
     <footer>Desarrollado por Emily Gil</footer>
     </div>
-    <img class="encryptor__image--overlay" src="imagen.jpg" alt="Imagen de salida" id="imageOverlay">
-    <script src="app.js"></script>
+    
+    <script src="/app.js" defer></script>
+    <script>
+        WebFontConfig = {
+    google: {
+    families: ['Inter:400,700'] 
+    },
+    fontactive: function(family) {
+    console.log('Fuente cargada: ' + family);
+    },
+    fontinactive: function(family) {
+    console.error('Error al cargar la fuente: ' + family);
+    }
+        };
+        WebFont.load(WebFontConfig);
+    </script>
 </body>
 </html>
 
-    <script src="app.js"></script>
-</body>
-</html>
