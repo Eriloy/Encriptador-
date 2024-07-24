@@ -4,7 +4,7 @@
 
 body{
     margin: 0;
-    background-image: linear-gradient(to top, #1a1616, #55081b);
+    background-image: linear-gradient(to top, #ffffff, #f6fbff);
     font-family: "Inter", 'Open Sans', sans-serif;
 }
 
@@ -23,7 +23,8 @@ body{
     min-height: 100vh;
 }
 .encryptor__container{
-    margin-top: 40px;
+
+    margin-top: 60px;
     display: flex;
     flex-direction: row; 
     justify-content: center;
