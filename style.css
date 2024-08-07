@@ -4,9 +4,10 @@
 
 body{
     margin: 0;
-    background-image: linear-gradient(to top, #ffffff, #f6fbff);
+    background-image: linear-gradient(to top, #1a1616, #55081b);
     font-family: "Inter", 'Open Sans', sans-serif;
 }
+
 
 .dark-mode {
     background-color: #1d2a35;
@@ -23,23 +24,23 @@ body{
     min-height: 100vh;
 }
 .encryptor__container{
-
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
+    display: flex;    
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     padding: 60px;
     margin-left: 40px;
     height: 200px;
-    display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .left-column ,
 .right-column {
     flex: 1; 
 }
+
 
 .encryptor__input,
 .encryptor__output {  
@@ -53,7 +54,7 @@ body{
 .textarea{
     resize: none;
     outline:none;
-    background-color: #444b58;
+    background-color: #55081b;
     color: white;
     border-radius: 20px;
     padding: 10px;
@@ -75,7 +76,7 @@ p{
     color: antiquewhite;
     opacity: 50%;
 }
-::-ms-input-placeholder{  /* Edge 12-18 */
+::-ms-input-placeholder{
     color: antiquewhite;
     opacity: 50%;
 }
@@ -84,6 +85,11 @@ p{
 }
 .encryptor__button{
     margin-top: 20px;
+}
+#encryptButton,
+#decryptButton {
+    height: 2em;
+    align-items: center; 
 }
 .copy-button{
     display: none;
