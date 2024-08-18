@@ -1,58 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
-    --color-primary: #ffffff;
-    --color-secondary: #0a3871;
-    --color-tertiary: #202124;;
+    --color-primary: rgba(229, 229, 229, 1); /*Color de figma #E5E5E5 en rgba*/
+    --color-secondary: #0A3871;
+    --color-tertiary: #202124;
     --color-placeholder:#275880;
     --color-quaternary:#5e133d;
     --glow-color: hsl(186 100% 69%)
     
-    --font-primary: "Inter", 'Open Sans', sans-serif;
-    --font-secondary: "Open Sans", sans-serif;
+
+    --font-primary:'Inter', sans-serif;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
 
 html{   
     font-size: 62.5%; /* 1rem = 10px , Calculo: 24px/10px = 2.4rem  (62.5% equivale a base 10px)*/
 }
 body{
-    box-sizing: border-box;
-    margin: 0;
+    
+    /*margin: 0;*/
     background-color: var(--color-primary);
-    font-family: var(--font-primary);
+    font-family: "Inter", sans-serif;
+    min-height: 100vh;
+    
+    border: 1px solid red;
+    
 }
-
+header{
+    width: 20%;
+    height: 15%;
+}
+main{
+    /*position: relative;*/
+}
 .logo{
-    padding: 20px;  
+    padding-top : 3.5rem;  
+    padding-left: 4rem;
     }
 .encryptor{
+    
     display: flex;
-    flex-direction: column;
-    height: 100vh; /* Ocupa toda la altura de la viewport */
-    min-height: 100vh;
+    
+    /*position: absolute;*/
+    
+    /*max-height: 100vh;*/
+    border: 1px solid red;
+    /*top: 0;*/
+    /*left: 0;*/
+    
 }
 .encryptor__container{
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
     display: flex;
     flex-direction: row;  
-    justify-content: center;
-    /*align-items: center;*/
-    padding: 6rem;
-    margin-left: 4rem;
-    height: 200px;
-    justify-content: space-between;
-}
-
-.left-column ,
-.right-column {
-    flex: 1; 
-}
-
-.encryptor__input,
-.encryptor__output {  
-    flex: 1; 
-    border: none;
-    margin: 0;
-    height: 100%;
     
+    /*height: auto;*/
+    justify-content: space-between;
+    padding-top: 4rem;
+    gap: 30rem;
+    
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+.encryptor__output{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+p{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-tertiary)
+}
+
+.encryptor-output__label{
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--color-tertiary)
 }
 
 .textarea{
@@ -60,24 +95,33 @@ body{
     outline:none;
     background-color: var(--color-primary);
     color: var(--color-tertiary);
-    border-radius: 20px;
-    padding: 1rem;
+    border-radius: 2em;
     border: none;
-    height: 200px;
     font-size: 1.5rem;
     font-family : var(--font-primary);
-    width: calc(90% - 3px);
-    margin-right: 0;
-    }
-
-
-p{
-    color: var(--color-tertiary);
-    font-size: 1.5rem;
-    font-weight: bold;
+    /*width: calc(90% - 3px);*/
+    /*margin-right: 0;*/
+    border: 1px solid red;
+    
 }
+
+
+.textarea--input{
+    
+    margin-top: 5.6rem;
+    margin-left: 8rem;
+    width: 60%;
+    margin-right: 20rem;
+    height: 80%;
+
+   
+    
+    
+}    
+
 ::placeholder{
     color: var(--color-placeholder);
+    font-size: 2rem;
     opacity: 50%;
 }
 ::-ms-input-placeholder{
@@ -86,46 +130,146 @@ p{
 }
 .textarea--output{
     display: none;
+    background-color: transparent;
+    
+    
+    
+}
+.encryptor__output-image{
+    margin-right: 3.2rem;
+}
+.encryptor__warning{
+    margin-top: 3rem;
+    font-size: 1rem;
+    padding: 0.1rem;
+    margin-left: 8rem;
+    position: absolute;
+    /*padding-top: 18rem;*/
+    color: var(--color-quaternary);
+    gap: 1.6;
+    
+}
+.encryptor__warning::before{
+    content: "!";
+    font-size: 0.8rem;
+    color: white;
+    background-color: var(--color-quaternary);
+    border: 0.1em solid var(--color-quaternary);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    
+    width: 1.2em;
+    height: 1.2em;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    vertical-align: middle;
+    
+}
+.encryptor__buttons-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    
+    gap: 2rem;  
 }
 .encryptor__button{
-    margin-top: 2rem;
-    height: 48px;
-    width: 160px;
-    border: none;
+    
+    height: 12%;
+    padding: 1rem;
+    width: 60%;
     cursor: pointer;
     font-family: var(--font-primary);
-    border-radius: 0.45em;
+    border-radius: 1.5em;
     color: var(--glow-color);
-    background-color: var(--color-tertiary);
-    gap: 0.62em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    
 }
-
 .encryptor__button:hover{
     background-position: 0;
         color: #a74878;
 }
-
-
+.encryptor__button--encrypt{
+    min-width: 38%;
+    margin-left: 8rem;
+    background-color: #D8DFE8;
+    border: solid 0.1em var(--color-quaternary);
+    color: var(--color-secondary);
+}
+.encryptor__button--decrypt{
+    
+    min-width: 38%;
+    background-color: var(--color-quaternary);
+}
 .copy-button{
     display: none;
 }
-footer{
-    box-shadow: 0px 0px 7px rgb(200, 213, 214);
-    background-color: var(--color-secondary);
-    color: var(--glow-color)
+
+.encryptor__input{
+    display: flex;
+    flex-direction: column;
+    /*width: 100%;
+    /*height: auto;*/
+}
+.left-column{
+    margin-left: 4rem;
+    padding-right: 15rem;
+    width: 70%;
+    height: 60%;
     
 }
+.right-column{
+    width: 30%;
+    /*margin: 4rem,4rem,4rem,0;*/
+    border-radius: 3.2em;
+    background-color: white;
+    padding-top: 12.8rem;
+    margin-right: 4rem;
+    margin-bottom: -10rem;
+    padding-left: 2.5rem;
+    margin-top: -9rem;
+    height: 600px;
+    
+    
+}
+.footer{
+    box-shadow: 0px 0px 7px rgb(48, 159, 159);
+    
+    padding:2rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+    /*width: 100%;*/
+    /*height: 2rem;*/
+    /*margin: -0,8rem;*/
+    /*margin-bottom: -0.9rem;*/
+    
+    padding-top: 0.2rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    
+}
+
+
+
 
 .initial-state {
     .output-image {
     display: block; /* Initially show the output image */
     }
-    .encryptor__output p { /* Show the "No se encontró ninguna imagen" text */
+}
+.encryptor__output p { /* Show the "No se encontró ninguna imagen" text */
     display: block;
-    }
 }
 .show-output {
-    .show-output {
     .encryptor__output {  /* Removed unnecessary nesting */
     display: block;
     }
@@ -136,5 +280,5 @@ footer{
     display: block;
         }
     }
-}
+
 
