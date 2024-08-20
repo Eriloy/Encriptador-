@@ -1,8 +1,5 @@
-function myFunction() {
-    console.log("myFunction called");
-    var element = document.querySelector ('.general-container');
-    element.classList.toggle("dark-mode");
-}
+const imagen = document.getElementById('imageOverlay');
+//const textarea = document.getElementById('');//
 
 const encryptButton = document.getElementById('encryptButton');
 const decryptButton = document.getElementById('decryptButton');
@@ -14,72 +11,37 @@ const encryptorOutput = document.querySelector('.encryptor__output');
     encryptorOutput.querySelector('.textarea--output').value = text;
     encryptorOutput.classList.add('show-output');
 }*/
-encryptButton.addEventListener('click', () => {
-    const inputText = document.getElementById('  inputText').value;
-    const encryptedText = inputText.replace(/enter|imes|ai|ober|ufat/g ,match => ({
+let aeiouEncryptionKeyObj = { //Objeto de encriptacion para reemplazar vocales
+    'a': 'ai',
     'e': 'enter',
     'i': 'imes',
-    'a': 'ai',
     'o': 'ober',
     'u': 'ufat'
-    })[match]);
-    // Update the output with the encrypted text (replace with your logic)
-    console.log(encryptedText); 
-});
-
-
-function decryptText(text) {
-    const decryptingMap = {
+}
+let aeiouDecryptionKeyObj = { //Objeto de desencriptacion para reemplazar vocales
+    'ai': 'a',
     'enter': 'e',
     'imes': 'i',
-    'ai': 'a',
     'ober': 'o',
     'ufat': 'u'
-    };
-    const decryptedText = text.replace(/enter|imes|ai|ober|ufat/g ,match => decryptingMap[match]);
-    return decryptedText; // Return the decrypted text
 }
+const inputText = document.getElementById('inputText')
+const outputText = document.getElementById('outputText');
+function encryptText() {
+    outputText.value = inputText.value.replace(/[aeiou]/g,match => aeiouEncryptionKeyObj [match]);
+    console.log(outputText.value);
+}
+    encryptButton.addEventListener('click', (encryptText));
+        
+    
+    
+
+
+
+
 
 /*function setTextAndShowOutput(text) {
     encryptorOutput.querySelector('.textarea--output').value = text;
     encryptorOutput.classList.add('show-output');
 }*/
 
-/*function encryptText(text) {
-    const encryptingMap = {
-    'e': 'enter',
-    'i': 'imes',
-    'a': 'ai',
-    'o': 'ober',
-    'u': 'ufat'
-    };
-    const encryptedText = text.replace(/enter|imes|ai|ober|ufat/g ,match => encryptingMap[match]);
-    return encryptedText; // Return the encrypted text
-}
-
-function decryptText(text) {
-    const decryptingMap = {
-    'enter': 'e',
-    'imes': 'i',
-    'ai': 'a',
-    'ober': 'o',
-    'ufat': 'u'
-    };
-    const decryptedText = text.replace(/enter|imes|ai|ober|ufat/g ,match => decryptingMap[match]);
-    return decryptedText; // Return the decrypted text
-}
-
-    encryptorOutput.classList.add('show-output');
-    
-
-    encryptButton.addEventListener('click', () => {
-
-        console.log('Encrypt button clicked!');
-        encryptText(document.getElementById('inputText').value);
-});
-
-    decryptButton.addEventListener('click', () => {
-    console.log('Decrypt button clicked!');
-    decryptText(document.getElementById('inputText').value); 
-    });
-    */
