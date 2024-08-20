@@ -77,7 +77,7 @@ main{
 
 
 
-p{
+.encryptor__output p{
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
@@ -112,11 +112,7 @@ p{
     margin-left: 8rem;
     width: 60%;
     margin-right: 20rem;
-    height: 80%;
-
-   
-    
-    
+    height: 80%;   
 }    
 
 ::placeholder{
@@ -129,7 +125,7 @@ p{
     opacity: 50%;
 }
 .textarea--output{
-    display: none;
+    /*display: none;*/
     background-color: transparent;
     
     
@@ -224,7 +220,7 @@ p{
 }
 .right-column{
     width: 30%;
-    /*margin: 4rem,4rem,4rem,0;*/
+
     border-radius: 3.2em;
     background-color: white;
     padding-top: 12.8rem;
@@ -232,7 +228,7 @@ p{
     margin-bottom: -10rem;
     padding-left: 2.5rem;
     margin-top: -9rem;
-    height: 600px;
+    height: 600px;*/
     
     
 }
@@ -260,7 +256,6 @@ p{
 
 
 
-
 .initial-state {
     .output-image {
     display: block; /* Initially show the output image */
@@ -274,11 +269,12 @@ p{
     display: block;
     }
 .textarea--output {
-    display: block;
+    /*display: block;*/
         }
 .copy-button {
     display: block;
         }
     }
+
 
 
