@@ -36,9 +36,10 @@ header{
     width: 20%;
     height: 15%;
 }
-main{
-    /*position: relative;*/
+/*main{
+    /*position: relative;
 }
+*/
 .logo{
     padding-top : 3.5rem;  
     padding-left: 4rem;
@@ -110,11 +111,19 @@ main{
     
     margin-top: 5.6rem;
     margin-left: 8rem;
-    width: 60%;
+    width: 168%;
     margin-right: 20rem;
     height: 80%;   
 }    
-
+.encryptor__msgandfixer-container{
+    display: inline-block;
+    
+    
+}
+.encryptor__fixer{
+    display:flex; 
+    float:left; 
+}
 ::placeholder{
     color: var(--color-placeholder);
     font-size: 2rem;
@@ -229,9 +238,8 @@ main{
     padding-left: 2.5rem;
     margin-top: -9rem;
     height: 600px;*/
-    
-    
 }
+
 .footer{
     box-shadow: 0px 0px 7px rgb(48, 159, 159);
     
@@ -254,7 +262,9 @@ main{
     
 }
 
-
+@keyframes encryptor__warning {
+    
+}
 
 .initial-state {
     .output-image {
@@ -268,9 +278,10 @@ main{
     .encryptor__output {  /* Removed unnecessary nesting */
     display: block;
     }
+}
 .textarea--output {
-    /*display: block;*/
-        }
+    /*display: block; aquiiiiiiiiiiiiiiiiiiiiiii*/
+    
 .copy-button {
     display: block;
         }
