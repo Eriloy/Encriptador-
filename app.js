@@ -61,31 +61,32 @@ const aeiouEncryptionKeyObj = {//Objeto de encriptacion para reemplazar vocales
         'u': 'ufat'  
     }
 
-function encryptText(textEntry,encryptionKey) {
+function encryptText(textEntry,encryptionKey,outputElement) {
     if (!/^[a-z0-9\s]+$/.test(textEntry)) {
         return outputText.value = '';
         /*document.getElementById("msgValidacion").style*/
     }
-    return textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);
+    const textToAppend = textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);
+    outputText.value += textToAppend;
+    /*return textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);*/
 }
 function handleEncryptButton() {
     const inputText = document.getElementById('inputText').value;
     const outputText = document.getElementById('outputText');
-    outputText.value = encryptText(inputText, aeiouEncryptionKeyObj); // Pasa el objeto de encriptación
+    encryptText(inputText, aeiouEncryptionKeyObj,outputText); // Pasa el objeto de encriptación
+        
     
     
 }
-function encriptAnAppendText() {
+/*function encriptAnAppendText() {
     const encryptedNewText = encryptText(textEntry, encryptionKey);
     const outputText = document.getElementById('outputText');
     if (!/^[a-z0-9\s]+$/.test(inputText.value)) {
         return outputText.value = '';
         
     }
-
-    
     outputText.value +=  encryptedNewText;
-}
+}*/
 const encryptButton = document.getElementById('encryptButton'); 
 encryptButton.addEventListener('click', (handleEncryptButton));
 
