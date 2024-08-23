@@ -60,32 +60,37 @@ const aeiouEncryptionKeyObj = {//Objeto de encriptacion para reemplazar vocales
         'o': 'ober',
         'u': 'ufat'  
     }
-    
 
 function encryptText(textEntry,encryptionKey) {
     if (!/^[a-z0-9\s]+$/.test(textEntry)) {
         return outputText.value = '';
+        /*document.getElementById("msgValidacion").style*/
     }
     return textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);
 }
 function handleEncryptButton() {
     const inputText = document.getElementById('inputText').value;
-    const encryptedText = encryptText(inputText, aeiouEncryptionKeyObj); // Pasa el objeto de encriptación
     const outputText = document.getElementById('outputText');
-    outputText.value = encryptedText;
+    outputText.value = encryptText(inputText, aeiouEncryptionKeyObj); // Pasa el objeto de encriptación
+    
+    
 }
 function encriptAnAppendText() {
-    if (!/^[a-z0-9\s]+$/.test(inputText)) {
+    const encryptedNewText = encryptText(textEntry, encryptionKey);
+    const outputText = document.getElementById('outputText');
+    if (!/^[a-z0-9\s]+$/.test(inputText.value)) {
         return outputText.value = '';
         
     }
 
-    const encryptedNewText = encryptText(textEntry, encryptionKey);
-    const outputText = document.getElementById('outputText');
+    
     outputText.value +=  encryptedNewText;
 }
 const encryptButton = document.getElementById('encryptButton'); 
 encryptButton.addEventListener('click', (handleEncryptButton));
+
+
+
 
 
 
