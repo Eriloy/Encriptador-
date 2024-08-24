@@ -1,14 +1,11 @@
-const imagen = document.getElementById('imageOverlay');
-//const textarea = document.getElementById('');//
+/*const imagen = document.getElementById('imageOverlay');*/
 
 
 
 
 
-/*function setTextAndShowOutput(text) {
-    encryptorOutput.querySelector('.textarea--output').value = text;
-    encryptorOutput.classList.add('show-output');
-}*/
+
+
 
 
 /*let aeiouDecryptionKeyObj = { //Objeto de desencriptacion para reemplazar vocales
@@ -17,40 +14,14 @@ const imagen = document.getElementById('imageOverlay');
     'imes': 'i',
     'ober': 'o',
     'ufat': 'u'
-}
-
-const inputText= document.getElementById('inputText');
-const outputText = document.getElementById('outputText');
-const aeiouEncryptionKeyObj = { //Objeto de encriptacion para reemplazar vocales
-    'a': 'ai',
-    'e': 'enter',
-    'i': 'imes',
-    'o': 'ober',
-    'u': 'ufat'
-};
-
-function encryptText(textEntry,encryptionKey) {
-    
-    outputText.value = textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);
-    
-}
-encryptText(inputText,aeiouEncryptionKeyObj);
-function encriptAnAppendText() {
-
-const encrptedText = encryptText(inputText,aeiouEncryptionKeyObj);
-    outputText.value += (outputText.value === "" ? "" : " ") + encrptedText;
-    console.log('Encrypted text:', encryptText);
-}   
-encryptButton.addEventListener('click', (encryptText));
-
-
-
-
-
-/*function setTextAndShowOutput(text) {
-    encryptorOutput.querySelector('.textarea--output').value = text;
-    encryptorOutput.classList.add('show-output');
 }*/
+
+
+
+
+
+
+
 
 const aeiouEncryptionKeyObj = {//Objeto de encriptacion para reemplazar vocales
     
@@ -61,32 +32,32 @@ const aeiouEncryptionKeyObj = {//Objeto de encriptacion para reemplazar vocales
         'u': 'ufat'  
     }
 
+
 function encryptText(textEntry,encryptionKey,outputElement) {
-    if (!/^[a-z0-9\s]+$/.test(textEntry)) {
+    if(!textEntry.trim()) {
         return outputText.value = '';
-        /*document.getElementById("msgValidacion").style*/
     }
+    document.querySelectorAll('#imgMissText, #noFoundText, #requestImputText').forEach(element => {
+        element.style.display = 'none';//forEach recorre cada elemento y lo oculta individuamente
+    });
+        
+    if (!/^[a-z0-9\s]+$/.test(textEntry)) {
+        document.getElementById('validationAlert').style.animation = "vibrar 0.5s infinite alternate"; 
+        return outputText.value = '';
+    }
+    document.getElementById('validationAlert').style.animation = "";
+    outputElement.value = '';
     const textToAppend = textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);
     outputText.value += textToAppend;
-    /*return textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);*/
+
 }
+
 function handleEncryptButton() {
     const inputText = document.getElementById('inputText').value;
     const outputText = document.getElementById('outputText');
     encryptText(inputText, aeiouEncryptionKeyObj,outputText); // Pasa el objeto de encriptación
-        
-    
-    
 }
-/*function encriptAnAppendText() {
-    const encryptedNewText = encryptText(textEntry, encryptionKey);
-    const outputText = document.getElementById('outputText');
-    if (!/^[a-z0-9\s]+$/.test(inputText.value)) {
-        return outputText.value = '';
-        
-    }
-    outputText.value +=  encryptedNewText;
-}*/
+
 const encryptButton = document.getElementById('encryptButton'); 
 encryptButton.addEventListener('click', (handleEncryptButton));
 
