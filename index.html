@@ -19,27 +19,32 @@
         <section class="encryptor__container">
             <section class="left-column">
                 <div class=" encryptor__input">
-                    <textarea class="textarea textarea--input" rows="19" id ="inputText" placeholder="Ingrese el texto aqui..."></textarea>
-                    <div><span class="encryptor__warning">Ingresa solo texto en minúscula y sin acentos</span></div>
+                    <textarea class="textarea textarea--input"  id ="inputText" placeholder="Ingrese el texto aqui..."></textarea>
+                    <button class="clear__button" id="clearButton">X</button>
+                    <div><span class="encryptor__warning" id=" msgValidacion">Solo letras minúsculas y sin acentos</span></div>
                     <div class="encryptor__buttons-container">
                     <button class="encryptor__button encryptor__button--encrypt" id = "encryptButton">Encriptar</button>
                     <button class="encryptor__button encryptor__button--decrypt" id = "decryptButton">Desencriptar</button>
+                    <!--<div class="encryptor__fixer" id="fixerButton">Ajustar Texto</div>-->
                     </div>
                 </div>
             </section>
-            
             <section class="right-column">
                 <div class="encryptor__output">
                     <textarea class="textarea textarea--output" id ="outputText" readonly placeholder="Texto encriptado o desencriptado"></textarea>
                     <!--<img class="encryptor__output-image" src="img/Muñeco.png" alt="Imagen de salida" id="imageOverlay">-->
-                    <p>Ningún mensaje fue <br>encontrado</p>
+                    <!--<p>Ningún mensaje fue <br>encontrado</p>-->
                     <br>
                     <span class="encryptor-output__label">Ingresa el texto que desees encriptar o<br>desencriptar</span>
                 </div>
             </section>
         </section>
-        <!--<div class="utility-buttons">-->
-        <!--<button class="copy-button" id="copyButton">Copiar Texto</button>-->
+            <div class="utility-buttons">
+            <div>
+            <button class="copy-button" id="copyButton">Copiar Texto</button>
+            </div>
+            
+            
         </div>
         
     </main>
