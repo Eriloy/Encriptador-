@@ -284,8 +284,16 @@ header{
 
 }
 
-@keyframes encryptor__warning {
-    
+@keyframes vibrar {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 .initial-state {
