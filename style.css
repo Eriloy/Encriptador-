@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --color-primary: rgba(229, 229, 229, 1); /*Color de figma #E5E5E5 en rgba*/
+    --color-primary: #E5E5E5; /*Color de figma #E5E5E5 en rgba*/
     --color-secondary: #0A3871;
     --color-tertiary: #202124;
     --color-placeholder:#275880;
     --color-quaternary:#5e133d;
-    --glow-color: hsl(186 100% 69%)
+    --glow-color: #61efff;
     
 
     --font-primary:'Inter', sans-serif;
@@ -106,8 +106,7 @@ header{
     border: none;
     font-size: 1.5rem;
     font-family : var(--font-primary);
-    /*width: calc(90% - 3px);*/
-    /*margin-right: 0;*/
+    
     
 }
 
@@ -182,7 +181,7 @@ header{
     cursor: pointer;
     font-family: var(--font-primary);
     border-radius: 1.5em;
-    color: var(--glow-color);
+    
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
@@ -192,21 +191,25 @@ header{
 
 .encryptor__button:hover{
     background-position: 0;
-        color: #a74878;
+    background-color: var(--color-tertiary);
+    color: var(--glow-color);
+    border: solid 0.1em var(--glow-color) ;
 }
 
 .encryptor__button--encrypt{
     min-width: 38%;
     margin-left: 8rem;
     background-color: #D8DFE8;
-    border: solid 0.1em var(--color-quaternary);
+    border: solid 0.1em var(--color-secondary);
     color: var(--color-secondary);
 }
 
 .encryptor__button--decrypt{
-    
+    color: var(--color-primary);
     min-width: 38%;
     background-color: var(--color-quaternary);
+    border: solid 0.1em var(--color-quaternary);
+
 }
 
 .encryptor__fixer{
@@ -216,6 +219,8 @@ header{
 
 
 .right-column{
+    display: flex;
+    flex-direction: column;
     
     margin-right: 4rem;
     padding-left: 4rem;
@@ -260,8 +265,30 @@ header{
 }
 
 .copy-button{
-    display: none;
+    
+     /* Posiciona el botón a 10 píxeles del borde inferior */
+    min-width: 38%;
+    padding:1rem;
+    
+    width: 60%;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    border-radius: 1.5em;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    font-size: 1.5rem;
+    border: solid 0.1em var(--color-secondary);
+    text-align: center;
+    align-items: center;
 }
+
+.copy-button:hover{
+    background-position: 0;
+    background-color: var(--color-tertiary);
+    color: var(--glow-color);
+    border: solid 0.1em var(--glow-color);
+}
+
 .footer{
     /*box-shadow: 0px 0px 7px rgb(48, 159, 159);*/   
     
@@ -281,10 +308,9 @@ header{
     padding-bottom: 0.5rem;
     font-size: 1.2rem;
     margin-top: 0.2rem;
-
 }
 
-@keyframes vibrar {
+@keyframes vibrate {
     0%{
         transform: translateX(0);
     }
@@ -296,23 +322,6 @@ header{
     }
 }
 
-.initial-state {
-    .output-image {
-    display: block; /* Initially show the output image */
-    }
-}
-.encryptor__output p { /* Show the "No se encontró ninguna imagen" text */
-    display: block;
-}
-.show-output {
-    .encryptor__output {  /* Removed unnecessary nesting */
-    display: block;
-    }
-}
-.textarea--output {
-    /*display: block; aquiiiiiiiiiiiiiiiiiiiiiii*/
-    
-.copy-button {
-    display: block;
-        }
-    }
+
+
+
