@@ -40,7 +40,9 @@ function encryptText(textEntry,encryptionKey,outputElement) {
     document.querySelectorAll('#imgMissText, #noFoundText, #requestImputText').forEach(element => {
         element.style.display = 'none';// se usa forEach recorre cada elemento y lo oculta individuamente
     });
-        
+    document.getElementById('outputText').style.display = 'block';
+    
+
     if (!/^[a-z0-9\s]+$/.test(textEntry)) {
         document.getElementById('validationAlert').style.animation = "vibrar 0.5s infinite alternate"; 
         return outputText.value = '';
