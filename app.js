@@ -38,7 +38,7 @@ function encryptText(textEntry,encryptionKey,outputElement) {
         return outputText.value = '';
     }
     document.querySelectorAll('#imgMissText, #noFoundText, #requestImputText').forEach(element => {
-        element.style.display = 'none';//forEach recorre cada elemento y lo oculta individuamente
+        element.style.display = 'none';// se usa forEach recorre cada elemento y lo oculta individuamente
     });
         
     if (!/^[a-z0-9\s]+$/.test(textEntry)) {
