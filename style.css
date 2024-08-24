@@ -219,6 +219,8 @@ header{
 
 
 .right-column{
+    
+    
     display: flex;
     flex-direction: column;
     
@@ -237,6 +239,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .encryptor__output p{
@@ -255,7 +258,10 @@ header{
 .textarea--output{
     /*display: none;*/
     background-color: transparent;
-    height: 80%;  
+    flex: 1;
+    max-width: 273.6px;
+    
+    max-height: 400.522px;
     
     
 }
