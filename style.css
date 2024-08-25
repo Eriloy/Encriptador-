@@ -278,6 +278,9 @@ header{
     margin-right: 3.2rem;
     margin: 1rem;
 }
+.hidden {
+    display: none;
+}
 
 .copy-button{
     min-width: 38%;
@@ -294,9 +297,10 @@ header{
     text-align: center;
     align-items: center;
     background-color: var(--color-quinary);
-    
-    
+    /*display: none;*/
 }
+
+
 
 .copy-button:hover{
     background-position: 0;
@@ -326,6 +330,7 @@ header{
     font-size: 1.2rem;
     margin-top: 0.2rem;
 }
+
 
 @keyframes flicker {
     0% {opacity: 0.27861;}
