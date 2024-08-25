@@ -322,6 +322,15 @@ header{
     margin-top: 0.2rem;
 }
 
+@keyframes flicker {
+    0% {opacity: 0.27861;}
+    50% {opacity: 1;}
+    100% {opacity: 2;}
+}
+.cursor-flicker {
+    animation: flicker 0.5s infinite;
+}
+
 @keyframes vibrate {
     0%{
         transform: translateX(0);
