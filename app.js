@@ -51,7 +51,7 @@ document.getElementById('validationAlert').style.animation = "";
 outputElement.value = '';
 const textToAppend = textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);
 outputText.value += textToAppend;
-
+copyButton.style.display = 'block';
 }
 
 function handleEncryptButton() {
@@ -60,6 +60,7 @@ const outputText = document.getElementById('outputText');
 encryptText(inputText, aeiouEncryptionKeyObj,outputText); // Pasa el objeto de encriptación
 }
 
+const copyButton = document.getElementById('copyButton');
 const encryptButton = document.getElementById('encryptButton'); 
 encryptButton.addEventListener('click', (handleEncryptButton));
 
