@@ -7,6 +7,7 @@
     --color-tertiary: #202124;
     --color-placeholder:#275880;
     --color-quaternary:#5e133d;
+    --color-quinary:#D8DFE8;
     --glow-color: #61efff;
     
 
@@ -29,17 +30,14 @@ body{
     font-family: "Inter", sans-serif;
     min-height: 100vh;
     width: 100%;
-    border: 1px solid red;
+    
     
 }
 header{
     width: 20%;
     height: 15%;
 }
-/*main{
-    /*position: relative;
-}
-*/
+
 .logo{
     padding-top : 3.5rem;  
     padding-left: 4rem;
@@ -63,7 +61,7 @@ header{
     
     /*height: auto;*/
     justify-content: space-between;
-    padding-top: 4rem;
+    padding-top: 2rem;
     /*gap: 1rem;*/
     width: 100%;
     height: 80vh;
@@ -75,7 +73,7 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+    padding-left: 12rem;
     /*height: auto;*/
 }
 
@@ -104,7 +102,7 @@ header{
     color: var(--color-tertiary);
     border-radius: 2em;
     border: none;
-    font-size: 1.5rem;
+    
     font-family : var(--font-primary);
     
     
@@ -113,14 +111,13 @@ header{
 .textarea--input{
     margin-top: 5.6rem;
     margin-left: 8rem;
-    /*width: 85%;*/
     margin-right: 4rem;
-    /*height: 80%;*/ 
     width: 85%; 
-    
     min-height: 288px;
     height: 72%;
     max-height: 400px;
+    font-size: 2rem;
+    color: var(--color-secondary);
 }
 
 ::placeholder{
@@ -135,12 +132,11 @@ header{
 }
 
 .encryptor__warning{
-    margin-top: 1rem;
+    margin-top: 6rem;
     font-size: 1rem;
     padding: 0.1rem;
     margin-left: 8rem;
     position: absolute;
-    /*padding-top: 18rem;*/
     color: var(--color-quaternary);
     gap: 1.6;
     
@@ -154,10 +150,8 @@ header{
     border: 0.1em solid var(--color-quaternary);
     border-radius: 50%;
     margin-right: 0.5rem;
-    
     width: 1.2em;
     height: 1.2em;
-    
     display: inline-flex;
     justify-content: center;
     align-self: center;
@@ -168,8 +162,9 @@ header{
 .encryptor__buttons-container{
     display: flex;
     flex-direction: row;
-    margin-top: 2rem;
-    width: 80%;
+    margin-top: 8rem;
+    width: 273.6px;
+    width: 100%;
     gap: 2rem;  
 }
 
@@ -199,16 +194,18 @@ header{
 .encryptor__button--encrypt{
     min-width: 38%;
     margin-left: 8rem;
-    background-color: #D8DFE8;
-    border: solid 0.1em var(--color-secondary);
-    color: var(--color-secondary);
+    background-color: var(--color-quaternary);
+    border: solid 0.1em var(--color-quaternary);
+    color: white;
 }
 
 .encryptor__button--decrypt{
     color: var(--color-primary);
     min-width: 38%;
-    background-color: var(--color-quaternary);
-    border: solid 0.1em var(--color-quaternary);
+    
+    background-color:var(--color-quinary);
+    border: solid 0.1em var(--color-secondary);
+    color: var(--color-secondary);
 
 }
 
@@ -219,30 +216,31 @@ header{
 
 
 .right-column{
-    
-    
     display: flex;
     flex-direction: column;
-    
-    margin-right: 4rem;
-    padding-left: 4rem;
+    margin-right: 5rem;
+    padding-left: 3.2rem;
     border-radius: 3.2em;
     background-color: white;
     padding-top: 3.2rem;
-    margin-bottom: -10rem;
+    padding-bottom: 1.7rem;
     padding-right: 3.2rem;
     margin-top: -9rem;
     margin-bottom: -0.01%;
 }
 
 .encryptor__output{
+    position: relative;
+    padding-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1rem;
     height: 100%;
 }
 
 .encryptor__output p{
+    padding-bottom: 0.5rem;
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
@@ -250,9 +248,10 @@ header{
 }
 
 .encryptor-output__label{
+    padding-bottom: 7.5rem;
     font-size: 1.3rem;
     text-align: center;
-    color: var(--color-tertiary)
+    color: #495057;
 }
 
 .textarea--output{
@@ -260,32 +259,33 @@ header{
     background-color: transparent;
     flex: 1;
     max-width: 273.6px;
-    
+    height: 72%;
     max-height: 400.522px;
-    
-    
 }
 
 .encryptor__output-image{
+    position: absolute;
+    width: 95%;
     margin-right: 3.2rem;
+    margin: 1rem;
 }
 
 .copy-button{
-    
-     /* Posiciona el botón a 10 píxeles del borde inferior */
     min-width: 38%;
-    padding:1rem;
-    
-    width: 60%;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
     cursor: pointer;
     font-family: var(--font-primary);
-    border-radius: 1.5em;
+    border-radius: 2.5em;
     color: var(--color-secondary);
     background-color: var(--color-primary);
     font-size: 1.5rem;
     border: solid 0.1em var(--color-secondary);
     text-align: center;
     align-items: center;
+    background-color: var(--color-quinary);
+    
 }
 
 .copy-button:hover{
