@@ -21,7 +21,7 @@
 
 
 
-
+const decryptButton = document.getElementById('decryptButton'); 
 const copyButton = document.getElementById('copyButton');
 const aeiouEncryptionKeyObj = {//Objeto de encriptacion para reemplazar vocales
     
@@ -30,6 +30,13 @@ const aeiouEncryptionKeyObj = {//Objeto de encriptacion para reemplazar vocales
     'i': 'imes',
     'o': 'ober',
     'u': 'ufat'  
+}
+const aeiouDecryptionKeyObj = { //Objeto de desencriptacion para reemplazar vocales
+    'ai': 'a',
+    'enter': 'e',
+    'imes': 'i',
+    'ober': 'o',
+    'ufat': 'u'
 }
 function getInputText() {
     return document.getElementById('inputText').value;
@@ -88,9 +95,18 @@ function handleEncryptButton() {
     encryptText(inputText, aeiouEncryptionKeyObj,outputText); // Pasa el objeto de encriptación
 }
 
+function decryptText(textEntry) {
+    textEntry = inputText.value;
+    /*return textEntry.replace(/ai|enter|imes|ober|ufat/g,match => aeiouEncryptionKeyObj [match]);*/
+    const decryptedText = textEntry.replace(/ai|enter|imes|ober|ufat/g, match => aeiouDecryptionKeyObj[match]);
+
+  console.log(decryptedText); // or do something with the decrypted text
+  outputText.value = decryptedText;
+}
 
 const encryptButton = document.getElementById('encryptButton'); 
 encryptButton.addEventListener('click', (handleEncryptButton));
+decryptButton.addEventListener('click', decryptText);
 
 
 
