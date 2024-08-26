@@ -1,5 +1,5 @@
 
-const textareaImput = document.getElementById('inputText');
+const textareaImput = document.getElementById('imputText');
 const clearButton = document.getElementById('clearButton');
 const formatButtom = document.getElementById('formatButton');
 const encryptButton = document.getElementById('encryptButton');
@@ -20,8 +20,8 @@ const aeiouDecryptionKeyObj = { //Objeto de desencriptacion para reemplazar voca
     'ober': 'o',
     'ufat': 'u'
 }
-function getInputText() {
-    return document.getElementById('inputText').value;
+function getImputText() {
+    return document.getElementById('imputText').value;
     }
 
 function hideOutputElements() {
@@ -48,10 +48,10 @@ document.getElementById('validationAlert').style.animation = "";
     outputText.value += textToAppend;
 }
 
-    const inputText = document.getElementById('inputText');
-    inputText.addEventListener('input', () => {
-const inputValue = getInputText(); 
-    if (inputValue.trim() === '') {
+    const imputText = document.getElementById('imputText');
+    imputText.addEventListener('imput', () => {
+const imputValue = getImputText(); 
+    if (imputValue.trim() === '') {
         copyButton.classList.add('hidden');
     }  
     else {
@@ -76,14 +76,14 @@ const inputValue = getInputText();
 });
 
 function handleEncryptButton() {
-    const inputText = getInputText();
+    const imputText = getImputText();
     const outputText = document.getElementById('outputText');
-    encryptText(inputText, aeiouEncryptionKeyObj,outputText); // Pasa el objeto de encriptación
+    encryptText(imputText, aeiouEncryptionKeyObj,outputText); // Pasa el objeto de encriptación
 }
 
 function decryptText(textEntry) {
     hideOutputElements();
-    textEntry = inputText.value;
+    textEntry = imputText.value;
     const decryptedText = textEntry.replace(/ai|enter|imes|ober|ufat/g, match => aeiouDecryptionKeyObj[match]);
     console.log(decryptedText); 
     outputText.value = decryptedText;
@@ -97,15 +97,15 @@ function formatText(textEntry) {
 encryptButton.addEventListener('click', (handleEncryptButton));
 decryptButton.addEventListener('click', decryptText);
 formatButtom.addEventListener('click', () => {
-    inputText.value = formatText(inputText.value);
+    imputText.value = formatText(imputText.value);
 });
 clearButton.addEventListener('click', () => { //la funcion esta directamente dentro del eventListener
-    const textAreasToClear = document.querySelectorAll('#inputText, #outputText');
+    const textAreasToClear = document.querySelectorAll('#imputText, #outputText');
     textAreasToClear.forEach(textArea => {
         textArea.value = '';
     });
 });
-textareaImput.addEventListener('input', () => {
+textareaImput.addEventListener('imput', () => {
     if(textareaImput.value.length > 4000) {
         textareaImput.value = textareaImput.value.substring(0, 1000);
     }

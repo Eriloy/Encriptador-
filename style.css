@@ -6,7 +6,6 @@
     --color-secondary: #0A3871;
     --color-tertiary: #202124;
     --color-placeholder:#275880;
-    --color-quaternary:#5e133d;
     --color-quinary:#D8DFE8;
     --glow-color: #61efff;
     --font-primary:'Inter', sans-serif;
@@ -58,7 +57,7 @@ header{
     
 }
 
-.encryptor__input{
+.encryptor__imput{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -81,7 +80,6 @@ header{
     right: 1rem;
     font-family: sans-serif;
     font-size: 1.5rem;
-    
     cursor: pointer;
     color: var(--color-placeholder);
     background-color: var(--color-quinary);
@@ -111,7 +109,7 @@ header{
     
 }
 
-.textarea--input{
+.textarea--imput{
     margin-top: 5.6rem;
     margin-left: 8rem;
     margin-right: 2rem;
@@ -121,7 +119,7 @@ header{
     max-height: 400px;
     font-size: 2rem;
     color: var(--color-secondary);
-    caret-color: var(--color-quaternary);
+    caret-color: var(--color-secondary);
 }
 
 ::placeholder{
@@ -130,7 +128,7 @@ header{
     opacity: 50%;
 }
 
-::-ms-input-placeholder{
+::-ms-imput-placeholder{
     color: var(--color-placeholder);
     opacity: 50%;
 }
@@ -336,7 +334,7 @@ header{
 }
 
 .footer{
-    /*box-shadow: 0px 0px 7px rgb(48, 159, 159);*/   
+    box-shadow: 0px 0px 7px rgb(48, 159, 159);  
     color: var(--color-primary);
     font-size: 0.9rem;
     display: flex;
@@ -350,7 +348,6 @@ header{
     bottom: 0;
     left: 0;
     right: 0;
-    
     padding-bottom: 0.5rem;
     font-size: 1.2rem;
     padding-top: 0.5rem;
