@@ -310,6 +310,11 @@ header{
     
 }
 
+.encryptor__format-button{
+    cursor: pointer;
+
+}
+
 .footer{
     /*box-shadow: 0px 0px 7px rgb(48, 159, 159);*/   
     
