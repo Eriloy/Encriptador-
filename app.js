@@ -1,21 +1,3 @@
-/*const imagen = document.getElementById('imageOverlay');*/
-
-
-
-
-
-
-
-
-
-/*let aeiouDecryptionKeyObj = { //Objeto de desencriptacion para reemplazar vocales
-    'ai': 'a',
-    'enter': 'e',
-    'imes': 'i',
-    'ober': 'o',
-    'ufat': 'u'
-}*/
-
 
 const textareaImput = document.getElementById('inputText');
 const clearButton = document.getElementById('clearButton');

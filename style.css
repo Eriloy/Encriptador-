@@ -9,8 +9,6 @@
     --color-quaternary:#5e133d;
     --color-quinary:#D8DFE8;
     --glow-color: #61efff;
-    
-
     --font-primary:'Inter', sans-serif;
 }
 
@@ -25,7 +23,7 @@ html{
 }
 body{
     
-    /*margin: 0;*/
+    
     background-color: var(--color-primary);
     font-family: "Inter", sans-serif;
     min-height: 100vh;
@@ -117,7 +115,6 @@ header{
     margin-top: 5.6rem;
     margin-left: 8rem;
     margin-right: 2rem;
-    
     max-width: 90%; 
     min-height: 288px;
     height: 72%;
@@ -144,7 +141,7 @@ header{
     padding: 0.1rem;
     margin-left: 8rem;
     position: absolute;
-    color: var(--color-quaternary);
+    color: var(--color-tertiary);
     gap: 1.6;
     cursor:default;
 }
@@ -153,8 +150,8 @@ header{
     content: "!";
     font-size: 0.8rem;
     color: white;
-    background-color: var(--color-quaternary);
-    border: 0.1em solid var(--color-quaternary);
+    background-color: var(--color-secondary);
+    border: 0.1em solid var(--color-secondary);
     border-radius: 50%;
     margin-right: 0.5rem;
     width: 1.2em;
@@ -176,7 +173,6 @@ header{
 }
 
 .encryptor__button{
-    
     height: 12%;
     padding: 1rem;
     width: 60%;
@@ -232,10 +228,8 @@ header{
     padding-top: 3.2rem;
     padding-bottom: 1.7rem;
     padding-right: 3.2rem;
-    margin-top: -9rem;
-    margin-bottom: -0.01%;
-    
-    
+    margin-top: -8rem;
+    margin-bottom: -1.5rem;
 }
 
 .encryptor__output{
@@ -278,6 +272,7 @@ header{
 }
 
 .encryptor__output-image{
+    padding-top: 9rem;
     position: absolute;
     width: 95%;
     margin-right: 3.2rem;
@@ -304,8 +299,6 @@ header{
     background-color: var(--color-quinary);
     /*display: none;*/
 }
-
-
 
 .copy-button:hover{
     background-position: 0;
@@ -340,13 +333,11 @@ header{
     background-position: 0;
     color: var(--glow-color);
     border: solid 0.1em var(--glow-color) ;
-    
-
 }
 
 .footer{
     /*box-shadow: 0px 0px 7px rgb(48, 159, 159);*/   
-    
+    color: var(--color-primary);
     font-size: 0.9rem;
     display: flex;
     flex-direction: row;
@@ -354,15 +345,15 @@ header{
     align-items: center;
     gap: 0.4rem;
     text-align: center;
-    
+    background-color: var(--color-secondary);
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    
     padding-bottom: 0.5rem;
     font-size: 1.2rem;
-    margin-top: 0.2rem;
+    padding-top: 0.5rem;
 }
 
 
