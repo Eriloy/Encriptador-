@@ -45,14 +45,6 @@ header{
 .encryptor{
     
     display: flex;
-    
-    /*position: absolute;*/
-    
-    /*max-height: 100vh;*/
-    
-    /*top: 0;*/
-    /*left: 0;*/
-    
 }
 .encryptor__container{
     /*margin-top: 4rem;*/
@@ -87,12 +79,23 @@ header{
 
 .clear__button{
     position:absolute;
-    top: 0;
-    right: 0;
+    top: 1.6rem;
+    right: 1rem;
+    font-family: sans-serif;
+    font-size: 1.5rem;
     
-    border: none;
-    background-color: transparent;
     cursor: pointer;
+    color: var(--color-placeholder);
+    background-color: var(--color-quinary);
+    border: 1px solid transparent;
+    text-align: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.clear__button:hover{
+    color: var(--color-tertiary);
 }
 
 .textarea{
@@ -113,7 +116,7 @@ header{
 .textarea--input{
     margin-top: 5.6rem;
     margin-left: 8rem;
-    margin-right: 4rem;
+    margin-right: 2rem;
     
     max-width: 90%; 
     min-height: 288px;
@@ -198,8 +201,8 @@ header{
 .encryptor__button--encrypt{
     min-width: 38%;
     margin-left: 8rem;
-    background-color: var(--color-quaternary);
-    border: solid 0.1em var(--color-quaternary);
+    background-color: var(--color-tertiary);
+    border: solid 0.1em var(--color-tertiary);
     color: white;
 }
 
@@ -327,7 +330,7 @@ header{
     margin-right: 1rem;
     background-color: var(--color-tertiary);
     color: var(--glow-color);
-    border: solid 0.1em var(--glow-color) ;
+    border: solid 0.1em var(--color-tertiary) ;
     align-items: center;
     font-size: rem;
     color: var(--color-primary);
@@ -336,6 +339,7 @@ header{
 .encryptor__format-button:hover{
     background-position: 0;
     color: var(--glow-color);
+    border: solid 0.1em var(--glow-color) ;
     
 
 }
