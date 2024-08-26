@@ -18,7 +18,7 @@
 
 
 
-
+const clearButton = document.getElementById('clearButton');
 const formatButtom = document.getElementById('formatButton');
 const encryptButton = document.getElementById('encryptButton');
 const decryptButton = document.getElementById('decryptButton'); 
@@ -110,13 +110,19 @@ function decryptText(textEntry) {
 function formatText(textEntry) {
     return textEntry.replace(/[^a-z0-9\s]/gi, '').toLowerCase();
 }
- 
+
+
 encryptButton.addEventListener('click', (handleEncryptButton));
 decryptButton.addEventListener('click', decryptText);
 formatButtom.addEventListener('click', () => {
     inputText.value = formatText(inputText.value);
 });
-
+clearButton.addEventListener('click', () => {
+    const textAreasToClear = document.querySelectorAll('#inputText, #outputText');
+    textAreasToClear.forEach(textArea => {
+        textArea.value = '';
+    });
+});
 
 
 
