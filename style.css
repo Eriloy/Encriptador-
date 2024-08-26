@@ -206,7 +206,6 @@ header{
 .encryptor__button--decrypt{
     color: var(--color-primary);
     min-width: 38%;
-    
     background-color:var(--color-quinary);
     border: solid 0.1em var(--color-secondary);
     color: var(--color-secondary);
@@ -232,6 +231,7 @@ header{
     padding-right: 3.2rem;
     margin-top: -9rem;
     margin-bottom: -0.01%;
+    
     
 }
 
@@ -313,7 +313,30 @@ header{
 }
 
 .encryptor__format-button{
+    margin-top: 1.9rem;
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+    width: 80px;
+    height: 40px;
     cursor: pointer;
+    font-family: var(--font-primary);
+    border-radius: 40%;
+    text-align: center;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    background-color: var(--color-tertiary);
+    color: var(--glow-color);
+    border: solid 0.1em var(--glow-color) ;
+    align-items: center;
+    font-size: rem;
+    color: var(--color-primary);
+}
+
+.encryptor__format-button:hover{
+    background-position: 0;
+    color: var(--glow-color);
+    
 
 }
 
