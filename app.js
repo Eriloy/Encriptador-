@@ -17,7 +17,7 @@
 }*/
 
 
-
+const textareaImput = document.getElementById('inputText');
 const clearButton = document.getElementById('clearButton');
 const formatButtom = document.getElementById('formatButton');
 const encryptButton = document.getElementById('encryptButton');
@@ -117,14 +117,17 @@ decryptButton.addEventListener('click', decryptText);
 formatButtom.addEventListener('click', () => {
     inputText.value = formatText(inputText.value);
 });
-clearButton.addEventListener('click', () => {
+clearButton.addEventListener('click', () => { //la funcion esta directamente dentro del eventListener
     const textAreasToClear = document.querySelectorAll('#inputText, #outputText');
     textAreasToClear.forEach(textArea => {
         textArea.value = '';
     });
 });
-
-
+textareaImput.addEventListener('input', () => {
+    if(textareaImput.value.length > 4000) {
+        textareaImput.value = textareaImput.value.substring(0, 1000);
+    }
+});
 
 
 
