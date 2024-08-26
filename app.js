@@ -96,11 +96,14 @@ function handleEncryptButton() {
 }
 
 function decryptText(textEntry) {
+    document.querySelectorAll('#imgMissText, #noFoundText, #requestImputText').forEach(element => {
+        element.style.display = 'none';
+    });
     textEntry = inputText.value;
     /*return textEntry.replace(/ai|enter|imes|ober|ufat/g,match => aeiouEncryptionKeyObj [match]);*/
     const decryptedText = textEntry.replace(/ai|enter|imes|ober|ufat/g, match => aeiouDecryptionKeyObj[match]);
 
-  console.log(decryptedText); // or do something with the decrypted text
+  console.log(decryptedText); 
   outputText.value = decryptedText;
 }
 
