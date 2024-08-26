@@ -42,28 +42,32 @@ function getInputText() {
     return document.getElementById('inputText').value;
     }
 
+function hideOutputElements() {
+    document.querySelectorAll('#imgMissText, #noFoundText, #requestImputText').forEach(element => {// se usa forEach recorre cada elemento y lo oculta individuamente
+        element.style.display = 'none';
+    });
+    
+}
 function encryptText(textEntry,encryptionKey,outputElement) {
     if(!textEntry.trim()) {
         return outputText.value = '';
 }
-document.querySelectorAll('#imgMissText, #noFoundText, #requestImputText').forEach(element => {
-    element.style.display = 'none';// se usa forEach recorre cada elemento y lo oculta individuamente
-});
-document.getElementById('outputText').style.display = 'block';
+    hideOutputElements();
+    document.getElementById('outputText').style.display = 'block';
 
 
 if (!/^[a-z0-9\s]+$/.test(textEntry)) {
     document.getElementById('validationAlert').style.animation = "vibrate 0.5s infinite alternate"; 
-    return outputText.value = '';
+        return outputText.value = '';
 }
 document.getElementById('validationAlert').style.animation = "";
-outputElement.value = '';
-const textToAppend = textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);
-outputText.value += textToAppend;
+    outputElement.value = '';
+    const textToAppend = textEntry.replace(/[aeiou]/g,match => encryptionKey [match]);
+    outputText.value += textToAppend;
 }
 
-const inputText = document.getElementById('inputText');
-inputText.addEventListener('input', () => {
+    const inputText = document.getElementById('inputText');
+    inputText.addEventListener('input', () => {
 const inputValue = getInputText(); 
     if (inputValue.trim() === '') {
         copyButton.classList.add('hidden');
@@ -73,7 +77,7 @@ const inputValue = getInputText();
     }
 });
 
-copyButton.addEventListener('click', () => {
+    copyButton.addEventListener('click', () => {
     const encryptedText = document.getElementById('outputText').value;
 
     if (encryptedText) {
@@ -96,15 +100,12 @@ function handleEncryptButton() {
 }
 
 function decryptText(textEntry) {
-    document.querySelectorAll('#imgMissText, #noFoundText, #requestImputText').forEach(element => {
-        element.style.display = 'none';
-    });
+    hideOutputElements();
     textEntry = inputText.value;
-    /*return textEntry.replace(/ai|enter|imes|ober|ufat/g,match => aeiouEncryptionKeyObj [match]);*/
     const decryptedText = textEntry.replace(/ai|enter|imes|ober|ufat/g, match => aeiouDecryptionKeyObj[match]);
 
-  console.log(decryptedText); 
-  outputText.value = decryptedText;
+    console.log(decryptedText); 
+    outputText.value = decryptedText;
 }
 
 const encryptButton = document.getElementById('encryptButton'); 
