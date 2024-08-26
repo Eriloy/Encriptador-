@@ -4,34 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <header></header> 
+    <header>
+        <img class="logo" src="img/Logo-1.png" alt="Logo">
+    </header>
     <main class="encryptor">
-        <div class="encryptor__container">
-            <div cass "encryptor__input">
-        <textarea class = "encriptor__textarea--input" id = "inputText" placeholder="Ingrese el texto aqui para encriptar o desencriptar"></textarea>
+        <section class="encryptor__container">
+            <section class="left-column">
+                <div class=" encryptor__imput">
+                    <textarea class="textarea textarea--imput"  id ="imputText" autocomplete="off" placeholder="Ingrese el texto aquí...(cáracteres max. 4.000)" autocapitalize="off" spellcheck="false" maxlength="4000"></textarea>
+                    <button class="clear__button" id="clearButton">X</button>
+                    <div><span class="encryptor__warning" id="validationAlert">Solo letras minúsculas y sin acentos</span></div>
+                    <div class="encryptor__buttons-container">
+                    <button class="encryptor__button encryptor__button--encrypt" id = "encryptButton">Encriptar</button>
+                    <button class="encryptor__button encryptor__button--decrypt" id = "decryptButton">Desencriptar</button>
+                    <div class="encryptor__format-button" id="formatButton">Ajustar Texto</div>
+                    </div>
+                </div>
+            </section>
+            <section class="right-column">
+                <div class="encryptor__output">
+                    <textarea class="textarea textarea--output" id ="outputText" readonly autocomplete="off"></textarea>
+                    <img class="encryptor__output-image" src="img/Muñeco.png" alt="Imagen de salida" id="imgMissText">
+                    <p id="noFoundText">Ningún mensaje fue <br>encontrado</p>
+                    <br>
+                    <span class="encryptor-output__label" id="requestImputText">Ingresa el texto que desees encriptar o<br>desencriptar</span>
+                    <button class="hidden copy-button" id="copyButton">Copiar Texto</button>
+                </div>
+            </section>
+        </section>
+            <div class="utility-buttons">
+            <div>
+            
             </div>
-            <d class="encryptor__output">
-                <div class="encryptor__image--overlay" id="imageOverlay"></div>
-                <textarea class = "encriptor__textarea--output" id = "outputText" readonly placeholder="Texto encriptado o desencriptado"></textarea>
-                <img class="encryptor__image-output" src="imagen.jpg" alt="Imagen de salida>
-            </div>
-            <section class="encryptor__buttons">
-                <button class="encriptor__button--encrypt" id="encriptButton">Encriptar</button>
-                <button class="encriptor__button--decrypt" id = "decryptButton">Desencriptar </button>
-                <button class="encriptor__button--copy" id = "copyButton">Copiar Texto </button>
-            </section>   
-        </div>    
+            
+            
+        </div>
+        
     </main>
-
-    <div class = "footerContent">
-    <footer>Desarrollado por Emily Gil</footer>
-    </div>
-
-    <script src="app.js"></script>
+    
+        <footer class="footer">
+            <address>Emily Gil</address><time>2024</time>
+        </footer>
+    
+        
+    
+    <script src="/app.js" defer></script>
+    
+>>>>>>> fix-issues
 </body>
 </html>
+
