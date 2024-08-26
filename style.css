@@ -104,7 +104,9 @@ header{
     border: none;
     
     font-family : var(--font-primary);
-    
+    overflow: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     
 }
 
@@ -113,7 +115,7 @@ header{
     margin-left: 8rem;
     margin-right: 4rem;
     
-    width: 90%; 
+    max-width: 90%; 
     min-height: 288px;
     height: 72%;
     max-height: 400px;
