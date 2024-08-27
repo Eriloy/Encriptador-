@@ -429,3 +429,90 @@ header{
 
 }
 
+@media (max-width: 767px) {
+    /* Estilos específicos para móviles */
+.logo{
+    padding-left: 0%;
+    margin-left: 0%;
+    width: 100%;
+    height: 100%;
+    
+}
+.encryptor__container {
+    flex-direction: column;
+    margin: 1.1rem;
+}
+.encryptor__input {
+    margin-left: 1rem ;
+    padding: 0%;
+}
+.left-column, .right-column {
+    width: 100%;
+}
+.right-column {
+    padding-bottom: 0%;
+}
+.clear__button{
+    top: -4rem;
+    right: 3rem;
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+
+.textarea--input, .textarea--output {
+    height: 30vh; 
+    padding: 0%;
+    margin: 0.5rem;
+    min-height: 200px;
+}
+
+.textarea--output{
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.encryptor__output-image {
+    display: none; 
+}
+
+.encryptor__warning{    
+    margin-left: 8rem;
+    margin-top: 0%;
+    margin-bottom: 0.5rem;
+}
+.encryptor__output-text{
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    position: absolute;
+}
+.encryptor__buttons-container {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.encryptor__button--encrypt{
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.encryptor__button--decrypt{
+    margin-left: -10rem;
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
+}
+
+
+.copy-button{
+    margin-top: 0.5rem;
+    margin-bottom: 0%;
+    margin-bottom: 0%;
+    width: 60%;
+}
+
+}
