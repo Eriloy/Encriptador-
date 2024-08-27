@@ -1,5 +1,5 @@
 
-const textareaImput = document.getElementById('imputText');
+const textareaInput = document.getElementById('inputText');
 const clearButton = document.getElementById('clearButton');
 const formatButtom = document.getElementById('formatButton');
 const encryptButton = document.getElementById('encryptButton');
@@ -20,12 +20,12 @@ const aeiouDecryptionKeyObj = { //Objeto de desencriptacion para reemplazar voca
     'ober': 'o',
     'ufat': 'u'
 }
-function getImputText() {
-    return document.getElementById('imputText').value;
+function getInputText() {
+    return document.getElementById('inputText').value;
     }
 
 function hideOutputElements() {
-    document.querySelectorAll('#imgMissText, #noFoundText, #requestImputText').forEach(element => {// se usa forEach recorre cada elemento y lo oculta individuamente
+    document.querySelectorAll('#imgMissText, #noFoundText, #requestInputText').forEach(element => {// se usa forEach recorre cada elemento y lo oculta individuamente
         element.style.display = 'none';
     });
     
@@ -48,10 +48,10 @@ document.getElementById('validationAlert').style.animation = "";
     outputText.value += textToAppend;
 }
 
-    const imputText = document.getElementById('imputText');
-    imputText.addEventListener('imput', () => {
-const imputValue = getImputText(); 
-    if (imputValue.trim() === '') {
+    const inputText = document.getElementById('inputText');
+    inputText.addEventListener('input', () => {
+const inputValue = getInputText(); 
+    if (inputValue.trim() === '') {
         copyButton.classList.add('hidden');
     }  
     else {
@@ -76,14 +76,14 @@ const imputValue = getImputText();
 });
 
 function handleEncryptButton() {
-    const imputText = getImputText();
+    const inputText = getInputText();
     const outputText = document.getElementById('outputText');
-    encryptText(imputText, aeiouEncryptionKeyObj,outputText); // Pasa el objeto de encriptación
+    encryptText(inputText, aeiouEncryptionKeyObj,outputText); // Pasa el objeto de encriptación
 }
 
 function decryptText(textEntry) {
     hideOutputElements();
-    textEntry = imputText.value;
+    textEntry = inputText.value;
     const decryptedText = textEntry.replace(/ai|enter|imes|ober|ufat/g, match => aeiouDecryptionKeyObj[match]);
     console.log(decryptedText); 
     outputText.value = decryptedText;
@@ -97,19 +97,20 @@ function formatText(textEntry) {
 encryptButton.addEventListener('click', (handleEncryptButton));
 decryptButton.addEventListener('click', decryptText);
 formatButtom.addEventListener('click', () => {
-    imputText.value = formatText(imputText.value);
+    inputText.value = formatText(inputText.value);
 });
 clearButton.addEventListener('click', () => { //la funcion esta directamente dentro del eventListener
-    const textAreasToClear = document.querySelectorAll('#imputText, #outputText');
+    const textAreasToClear = document.querySelectorAll('#inputText, #outputText');
     textAreasToClear.forEach(textArea => {
         textArea.value = '';
     });
 });
-textareaImput.addEventListener('imput', () => {
-    if(textareaImput.value.length > 4000) {
-        textareaImput.value = textareaImput.value.substring(0, 1000);
+textareaInput.addEventListener('input', () => {
+    if(textareaInput.value.length > 4000) {
+        textareaInput.value = textareaInput.value.substring(0, 1000);
     }
 });
+
 
 
 
