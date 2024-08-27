@@ -226,15 +226,17 @@ header{
     padding-bottom: 1.7rem;
     padding-right: 3.2rem;
     margin-top: -8rem;
+    position: relative;
 }
 
 .encryptor__output{
-    position: relative;
+    /*position: relative;*/
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    
+    
 }
 
 .encryptor__output p{
@@ -252,6 +254,7 @@ header{
     color: #495057;
     cursor: default;
     padding-top: 1rem;
+
 }
 
 .textarea--output{
@@ -281,7 +284,7 @@ header{
 .copy-button{
     min-width: 38%;
     padding: 1rem;
-    width: 100%;
+    width: 80%;
     margin-bottom: 1rem;
     cursor: pointer;
     font-family: var(--font-primary);
@@ -293,7 +296,11 @@ header{
     text-align: center;
     align-items: center;
     background-color: var(--color-quinary);
-    /*display: none;*/
+    margin-top: 10rem;
+    position: absolute;
+    bottom: 1rem;
+    
+    
 }
 
 .copy-button:hover{
@@ -374,6 +381,11 @@ header{
     }
 }
 
+
+@media only screen 
+    and (min-width : 320px) {
+   /* Styles here */
+}
 
 
 
