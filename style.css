@@ -248,12 +248,14 @@ header{
 }
 
 .encryptor-output__label{
+    position: absolute;
     padding-bottom: 1rem;
     font-size: 1.3rem;
     text-align: center;
     color: #495057;
     cursor: default;
     padding-top: 1rem;
+    margin-right: 6rem;
 
 }
 
@@ -275,6 +277,7 @@ header{
     width: 95%;
     margin-right: 3.2rem;
     margin: 1rem;
+    margin-bottom: 1rem;
 }
 .hidden {
     display: none;
@@ -310,7 +313,7 @@ header{
     
 }
 
-.encryptor__format-button{
+.format-button{
     margin-top: 1.9rem;
     padding-top: 0.8rem;
     padding-left: 1rem;
@@ -319,7 +322,7 @@ header{
     height: 40px;
     cursor: pointer;
     font-family: var(--font-primary);
-    border-radius: 40%;
+    border-radius: 1.5em;
     text-align: center;
     padding-right: 1rem;
     margin-right: 1rem;
@@ -327,7 +330,7 @@ header{
     color: var(--glow-color);
     border: solid 0.1em var(--color-tertiary) ;
     align-items: center;
-    font-size: rem;
+    font-size: 1rem;
     color: var(--color-primary);
     
 }
@@ -421,7 +424,7 @@ header{
 .encryptor__output-text{
     text-align: center;
     margin-bottom: 14rem;
-    position: absolute;
+    position: relative;
 }
 .encryptor__buttons-container {
     justify-content: center; /* Centra los botones horizontalmente */
@@ -467,6 +470,9 @@ header{
     margin: 0.5rem;
     min-height: 200px;
 }
+.textarea--input{
+    margin-left: 2rem;
+}
 
 .textarea--output{
     position: relative;
@@ -478,9 +484,10 @@ header{
 }
 
 .encryptor__warning{    
-    margin-left: 8rem;
+    padding-left: 8rem;
+    margin-left: 0%;
     margin-top: 0%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 .encryptor__output-text{
     text-align: center;
@@ -494,19 +501,29 @@ header{
     align-items: center;
     gap: 0.5rem;
 }
+.encryptor__button--decrypt{
+    margin-left: -4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 10rem;
+    width: 5%;
+}
 .encryptor__button--encrypt{
-    margin-left: 0.5rem;
+    margin-left: -14rem;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
+    width: 5%;
 }
 
+.format-button-container {
 
-.encryptor__button--decrypt{
-    margin-left: -10rem;
-    margin-top: 0.5rem;
-    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    text-align: center;
+    position: fixed;
+    right:  3rem;   
+    width: 35%;
 }
-
 
 .copy-button{
     margin-top: 0.5rem;

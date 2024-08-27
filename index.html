@@ -25,17 +25,22 @@
                     <div class="encryptor__buttons-container">
                     <button class="encryptor__button encryptor__button--encrypt" id = "encryptButton">Encriptar</button>
                     <button class="encryptor__button encryptor__button--decrypt" id = "decryptButton">Desencriptar</button>
-                    <div class="encryptor__format-button" id="formatButton">Ajustar Texto</div>
-                    </div>
+                        <div class="format-button-container">
+                        <button class="encryptor__button format-button" id="formatButton">Ajustar Texto</button>
+                        </div>
+                </div>
                 </div>
             </section>
             <section class="right-column">
                 <div class="encryptor__output">
                     <textarea class="textarea textarea--output" id ="outputText" readonly autocomplete="off"></textarea>
+                    
                     <img class="encryptor__output-image" src="img/Muñeco.png" alt="Imagen de salida" id="imgMissText">
+                    <div class="encryptor__output-text">
                     <p id="noFoundText">Ningún mensaje fue <br>encontrado</p>
                     <br>
-                    <span class="encryptor-output__label" id="requestInputText">Ingresa el texto que desees encriptar o<br>desencriptar</span>
+                    <span class="encryptor-output__label" id="requestInputText">Ingresa el texto que desees encriptar o desencriptar</span>
+                    </div>
                     <button class="hidden copy-button" id="copyButton">Copiar Texto</button>
                 </div>
             </section>
