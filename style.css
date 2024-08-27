@@ -484,16 +484,21 @@ header{
 }
 
 .encryptor__warning{    
-    padding-left: 8rem;
+    padding-left: 4rem;
     margin-left: 0%;
     margin-top: 0%;
     margin-bottom: 1rem;
 }
 .encryptor__output-text{
-    text-align: center;
+    width: 100%;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     position: absolute;
+
+}
+.encryptor-output__label{
+    margin-left: 4rem;
+    padding-left: 1.5rem;
 }
 .encryptor__buttons-container {
     margin-top: 0.5rem;
