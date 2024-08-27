@@ -258,7 +258,6 @@ header{
 }
 
 .textarea--output{
-    /*display: none;*/
     background-color: transparent;
     flex: 1;
     max-width: 343px;
@@ -382,10 +381,51 @@ header{
 }
 
 
-@media only screen 
-    and (min-width : 320px) {
-   /* Styles here */
+@media (min-width: 768px) and (max-width: 1199px) {
+    /* Estilos específicos para tabletas */
+.encryptor__container {
+    flex-direction: column; /* Cambia la dirección a columna para mejor visualización en pantallas más pequeñas */
+    }
+.encryptor__input {
+    margin-left: 4rem ;
+}
+.left-column {
+    width: 80%; /* La columna izquierda ocupará todo el ancho */
+}
+.right-column {
+    width: 80%; /* La columna derecha también ocupará todo el ancho */
+    margin-top: 1.5rem;
+    margin-left: 10rem;
+    margin-right: 2rem;
+    max-height: 343px;
+    min-height: 133px; 
+    padding-bottom: 0%;
+}
+.encryptor__output {
+    padding-top: 0.5rem;
+    max-height: 343px;
 }
 
+.textarea--output {
+    position: relative;
+    min-width: 533px;
+    min-height: 200px;
+    max-height: 343px;
+    padding-bottom: 2rem;
+}
+.encryptor__output-image{
+    display: none;
+    margin: 0;
 
+}
+.encryptor__output-text{
+    text-align: center;
+    margin-bottom: 14rem;
+    position: absolute;
+}
+.encryptor__buttons-container {
+    justify-content: center; /* Centra los botones horizontalmente */
+    }
+
+}
 
